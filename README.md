@@ -1,7 +1,7 @@
 # Unnamed Company DevOps Interview Project
-This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal their company name.
+This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. I have designed and developed a simplified CI/CD for the webapp and explained my answer in the Devops_Design_Document.pdf file.
 
-## Interview Project (DevOps)
+## Interview Project Question (DevOps)
 
 The purpose of this project is to design and implement a CI/CD system for a ToDo web application. You are expected to create a short design document, and to prototype the CI/CD system in a Docker environment.
 There is no right-or-wrong answer, but you are expected to deliver a working solution. You can ask questions and seek help if there is anything that you are not familiar with. You should spend about 8-12 hours.
