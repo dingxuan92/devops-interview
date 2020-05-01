@@ -32,14 +32,10 @@ Deliver a ZIP (or tar.gz) file of the project directory that contains all necess
 - Document describing your implementation
 - Instructions on how to run and test the system
 
-## Extra help on the project
+## Solution
 
-To start the environment, execute:
+Please read the Design Document PDF before executing the docker-compose file for inital set up.
 
-$ docker-compose up -d
-
-This starts the Git SSH Server, Webapp as well as the Jenkins server.
-The app is running at http://localhost:8082.
-
-Copy your public SSH key in the ./git-server/keys directory.
+Remember to copy your public SSH key in the ./git-server/keys directory.
 See https://github.com/jkarlosb/git-server-docker for more info on using the Git Server container.
+
