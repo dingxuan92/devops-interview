@@ -1,7 +1,7 @@
 # Unnamed Company DevOps Interview Project
 This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. 
 
-I have designed and developed a simplified CI/CD pipeline for the webapp and explained my solution in the Devops_Design_Document.pdf file.
+I have designed and developed a simplified CI/CD pipeline for a web application and explained my solution in the Devops_Design_Document.pdf file.
 
 ## Original Interview Question (DevOps)
 
@@ -34,7 +34,7 @@ Deliver a ZIP (or tar.gz) file of the project directory that contains all necess
 
 ## Solution
 
-Please read the Design Document PDF before executing the docker-compose file for inital set up.
+Please read the Design Document PDF before executing the docker-compose file.
 
 Remember to copy your public SSH key in the ./git-server/keys directory.
 See https://github.com/jkarlosb/git-server-docker for more info on using the Git Server container.
