@@ -1,0 +1,63 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-08-05 09:47:26.144 UTC</timestamp>
+  <md5sum>49bd83dec0511246652bf817c5c62a03</md5sum>
+  <fileName>Credential id=gitKey name=git</fileName>
+  <usages>
+    <entry>
+      <string>Devops-Project/playground/master</string>
+      <ranges>13-15</ranges>
+    </entry>
+    <entry>
+      <string>Devops-Project/webapp/master</string>
+      <ranges>10-12</ranges>
+    </entry>
+    <entry>
+      <string>Devops-Project/MASTER</string>
+      <ranges>16-17,21-23</ranges>
+    </entry>
+    <entry>
+      <string>webapp/webapp/master</string>
+      <ranges>3-9</ranges>
+    </entry>
+    <entry>
+      <string>Devops-Project/master</string>
+      <ranges>24,26-32</ranges>
+    </entry>
+    <entry>
+      <string>Devops-Project/playground2</string>
+      <ranges>24-27</ranges>
+    </entry>
+    <entry>
+      <string>Devops-Project/playground1</string>
+      <ranges>1-4</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.18">
+      <timestamp>1533463557737</timestamp>
+      <itemFullName>webapp/Master</itemFullName>
+      <timestamp0>1533463519427</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.18">
+      <timestamp>1533569775977</timestamp>
+      <itemFullName>webapp/MASTER</itemFullName>
+      <timestamp0>1533569398634</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.18">
+      <timestamp>1533657231107</timestamp>
+      <itemFullName>Devops-Project/MASTER</itemFullName>
+      <timestamp0>1533656805863</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.18">
+      <timestamp>1533692792612</timestamp>
+      <itemFullName>Devops-Project/playground2</itemFullName>
+      <timestamp0>1533692549182</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.18">
+      <timestamp>1533699203904</timestamp>
+      <itemFullName>Devops-Project/master</itemFullName>
+      <timestamp0>1533693137286</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>

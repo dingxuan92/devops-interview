@@ -1,0 +1,55 @@
+commit c0447e5494f4fe3aac208a283d12cf96f69b7f54
+tree 288340d47a679c06e3e706c75ed02e4b1d158eee
+parent 1e90652e27ddadc936f6d5da1251011d1e9b43eb
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:06:57 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:06:57 +0800
+
+    edit jenkinsfile
+
+
+
+:100644 100644 e6dfef08e6983ea40949f744507b6dbdfda8243a 9569c6d360554235b8bbad87bd7f595898fd4757 M	Jenkinsfile
+commit 1e90652e27ddadc936f6d5da1251011d1e9b43eb
+tree b1a02d89c2af14ffd604b1a4c0b78d02c8e8ac65
+parent 9cb9bb3caf384b2ef07140df1581baf8571da32c
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:06:20 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:06:20 +0800
+
+    edit jenkinsfile
+
+
+
+:100644 100644 9569c6d360554235b8bbad87bd7f595898fd4757 e6dfef08e6983ea40949f744507b6dbdfda8243a M	Jenkinsfile
+commit 9cb9bb3caf384b2ef07140df1581baf8571da32c
+tree 288340d47a679c06e3e706c75ed02e4b1d158eee
+parent bc868ec91857a0df97ac6f59a6796c10531a81ed
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:04:10 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:04:10 +0800
+
+    edit jenkinsfile
+
+
+
+:100644 100644 eca25adafa98b2c607eb2d2c2e04bc452dbca31d 9569c6d360554235b8bbad87bd7f595898fd4757 M	Jenkinsfile
+commit bc868ec91857a0df97ac6f59a6796c10531a81ed
+tree 307c31954cc525effb52ae956f5deff0cab970e6
+parent 22249d33390efafc36f923c30ccdd8596b6b0d66
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:03:25 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:03:25 +0800
+
+    edit jenkinsfile
+
+
+
+:100644 100644 675e6e69c18fb2754b9ad74432fe956b5337c13f eca25adafa98b2c607eb2d2c2e04bc452dbca31d M	Jenkinsfile
+commit 22249d33390efafc36f923c30ccdd8596b6b0d66
+tree 857d7742e358457b9747baed10892868f621ab44
+parent 47116b8bc32ddf5d5946ba152c0c497cadd0ca34
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:01:11 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 00:01:11 +0800
+
+    edit jenkinsfile
+
+
+
+:100644 100644 b9859aaea58c661e3ddef4f4caf1b7223ba46e3d 675e6e69c18fb2754b9ad74432fe956b5337c13f M	Jenkinsfile

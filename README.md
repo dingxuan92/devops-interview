@@ -1,5 +1,5 @@
 # Unnamed Company DevOps Interview Project
-This is a DevOps project I have done for a interview with a tech company for a DevOps engineer in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal their company name.
+This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal their company name.
 
 ## Interview Project (DevOps)
 

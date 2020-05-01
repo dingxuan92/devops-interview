@@ -1,0 +1,10 @@
+Started on Aug 8, 2018 1:52:07 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 81cee51c620511417a8ea53a65e9e15cf9f073d4 (refs/remotes/origin/master)
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git ls-remote -h ssh://git@git-server:22/git-server/repos/webapp.git # timeout=10
+Found 1 remote heads on ssh://git@git-server:22/git-server/repos/webapp.git
+[poll] Latest remote head revision on refs/heads/master is: 9ef5391514a99dc9c369a32379989d9aed5adec4
+Done. Took 0.45 sec
+Changes found

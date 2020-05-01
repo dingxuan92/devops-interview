@@ -1,0 +1,85 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-08-06 13:50:52.505 UTC</timestamp>
+  <original>
+    <name>webapp/MASTER</name>
+    <number>9</number>
+  </original>
+  <md5sum>eb883be3763d1dcf83ffcfdc4d4bb242</md5sum>
+  <fileName>Docker image sha256:eb883be3763d1dcf83ffcfdc4d4bb242adba46cfc7ce1032caca3e1c76e3f2de</fileName>
+  <usages/>
+  <facets>
+    <org.jenkinsci.plugins.docker.commons.fingerprint.DockerDescendantFingerprintFacet plugin="docker-commons@1.13">
+      <timestamp>1533563452504</timestamp>
+      <imageId>sha256:eb883be3763d1dcf83ffcfdc4d4bb242adba46cfc7ce1032caca3e1c76e3f2de</imageId>
+      <usages>
+        <entry>
+          <string>Devops-Project/playground/master</string>
+          <ranges>13-15</ranges>
+        </entry>
+        <entry>
+          <string>Devops-Project/webapp/master</string>
+          <ranges>10-12</ranges>
+        </entry>
+        <entry>
+          <string>Devops-Project/MASTER</string>
+          <ranges>16-17,21-23</ranges>
+        </entry>
+        <entry>
+          <string>webapp/MASTER</string>
+          <ranges>9,11-12,14-15</ranges>
+        </entry>
+        <entry>
+          <string>webapp/webapp/master</string>
+          <ranges>4,6-9</ranges>
+        </entry>
+        <entry>
+          <string>Devops-Project/playground2</string>
+          <ranges>25,27</ranges>
+        </entry>
+        <entry>
+          <string>Devops-Project/master</string>
+          <ranges>26-32</ranges>
+        </entry>
+        <entry>
+          <string>webapp/multibranch/master</string>
+          <ranges>1-2</ranges>
+        </entry>
+      </usages>
+      <descendantImageIds class="sorted-set">
+        <string>fa92e40b68889d4a22d7e8633e4487949c04a18423ef6d5e7e2a222343205cbe</string>
+        <string>sha256:02cb962c330d1bede4dbf6b79f4a7ee145c4c36625dc3311c3812bfa90744a1c</string>
+        <string>sha256:088025f8d77bcc0fc1df7d1a82907d39c1b761a362d8ab3ec0bdc3cf834af7d8</string>
+        <string>sha256:0ae7c04fd3ca4a7fd94866dc9adb9ac2561676a60ff81df5b3cdcfa51a934724</string>
+        <string>sha256:0d8d06b0e3aa5295a3ea2a32537c16b072265034fabadb003829d2468b4d4f8a</string>
+        <string>sha256:0f606d27cfdbfbcea34ae586c2ebe11484b8949ae996204d2a55bbee794f0ebc</string>
+        <string>sha256:13820afe449e092d5301c05d8514829b4dc36f0274a1feaf11ea9fcdab0e218e</string>
+        <string>sha256:1c8855121756db1c490b767c04a29362935b767f40c112223bf5ebe6d57b63ae</string>
+        <string>sha256:2af0062173071ea84002ae73abf8d606fcf893bad1c161546cdb23945791f49c</string>
+        <string>sha256:30dc0b61824fa85add81a11e75a56aaaa2024656a9b23abb49ece0a0532d0b74</string>
+        <string>sha256:3b71c84c4a8feae9bd37413c40901a5e12b1db62fb9b5bd103b340a88476565a</string>
+        <string>sha256:4b2a6f5795a1489f2c5184f274e80e1bab9c8eb177b5886cea114f3923ab2589</string>
+        <string>sha256:4b7f15753ec951a826a839b727c15fbfbf800f79fcf44fa5543fecb31caf1e44</string>
+        <string>sha256:539bc18d8ece4336f2192f702b7435f01f4c2ed4a3021cb6b7ac2665279e731a</string>
+        <string>sha256:5ac90f0e81383acffa6222e4a822c4ac2c15525d5ba1a347c1f57772632dc9f0</string>
+        <string>sha256:6f3892d7eac73c05a120762f0908e8e8ba17a56a1c03652c68017577829a695e</string>
+        <string>sha256:7321d55854c280d400178187536c940fe86581c02cc071337051b56624bf0736</string>
+        <string>sha256:830a4a504d6d54e127d6cfc890936ec6ac211c49b276cd5e6ba6e18d5d3a8d13</string>
+        <string>sha256:87a8c4fd125a6ffe704e0597226b107a0504e3ca2afc787a33fdfa11f035bf1a</string>
+        <string>sha256:8ccf68b5d238cdc4b8b908e2e2b8d5a8c4c80729a1c54b9f14dd78c540520989</string>
+        <string>sha256:8d6d088e31ffbd68cc36583639dd2da78e126946778088cc0861b85806f34592</string>
+        <string>sha256:8deeacc92bd913a26f6414049218fecfc12b699c6ceb37aaaf5dd635ccdf9470</string>
+        <string>sha256:8e3a523552b93389ffbd46a72f9d31b0d1577d37e3042bea28a89681458dfc3b</string>
+        <string>sha256:9948cb51e8fc9f1d4d9ad949c4ef18c95a39b4303eb660ce4d797292d3b0ca94</string>
+        <string>sha256:a5bb4af442bc30d04e2415f7adb4dffc5b604034e308fa9f5ac130af140286ed</string>
+        <string>sha256:ab3cb182c247b9c0794fbf64d2003b5fa7314912061a6ed20e8f87610883701a</string>
+        <string>sha256:af26067203b8d74fdc15d54ad10a2c0096746a5aa77b3f3e756e38b360299fe9</string>
+        <string>sha256:c0a09710d959c145326dec33213eeee06a89d81f7bf7d430eada25d2c84e2701</string>
+        <string>sha256:c871860fa474260535b763505b5661e23def49237b5750a6c7c2140e143569f1</string>
+        <string>sha256:d0efc3cc0c50e2ebcf6209e5ad6b2b2ca892bb4985e414b7c8fd2793f435c084</string>
+        <string>sha256:f40f03a517d361fe7fffdeae8ea4fa6c67ba9854e30e5b2746506da631b005bd</string>
+        <string>sha256:f4517f7363115a54ce502c6caeb7351bd55b402ac33730bc0a670e16935e66a8</string>
+      </descendantImageIds>
+    </org.jenkinsci.plugins.docker.commons.fingerprint.DockerDescendantFingerprintFacet>
+  </facets>
+</fingerprint>

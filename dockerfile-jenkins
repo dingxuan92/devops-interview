@@ -1,0 +1,8 @@
+FROM jenkins/jenkins:lts
+
+USER root
+
+# To allow us to access /var/run/docker.sock on the Mac
+RUN gpasswd -a jenkins staff
+
+USER jenkins

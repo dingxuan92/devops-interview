@@ -1,0 +1,203 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.23">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction/>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.9">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.54">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <hudson.plugins.git.util.BuildData plugin="git@3.9.1">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.7.3">
+              <sha1>9ef5391514a99dc9c369a32379989d9aed5adec4</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>31</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>ssh://git@git-server:22/git-server/repos/webapp.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.9.1">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/Devops-Project/master</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.6">
+      <revisionStates>
+        <entry>
+          <string>git ssh://git@git-server:22/git-server/repos/webapp.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.docker.commons.fingerprint.DockerFingerprintAction plugin="docker-commons@1.13">
+      <imageIDs>
+        <string>sha256:f4517f7363115a54ce502c6caeb7351bd55b402ac33730bc0a670e16935e66a8</string>
+        <string>sha256:eb883be3763d1dcf83ffcfdc4d4bb242adba46cfc7ce1032caca3e1c76e3f2de</string>
+      </imageIDs>
+    </org.jenkinsci.plugins.docker.commons.fingerprint.DockerFingerprintAction>
+    <org.jenkinsci.plugins.docker.workflow.ImageAction plugin="docker-workflow@1.17">
+      <names class="sorted-set">
+        <string>kyma/docker-nginx</string>
+      </names>
+    </org.jenkinsci.plugins.docker.workflow.ImageAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputAction plugin="pipeline-input-step@2.8">
+      <ids class="java.util.concurrent.CopyOnWriteArrayList"/>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction plugin="pipeline-input-step@2.8">
+      <userId>admin</userId>
+    </org.jenkinsci.plugins.workflow.support.steps.input.ApproverAction>
+  </actions>
+  <queueId>93</queueId>
+  <timestamp>1533693137266</timestamp>
+  <startTime>1533693137277</startTime>
+  <result>SUCCESS</result>
+  <duration>48317</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>timestamps {
+    def projectName = &quot;webapp&quot;
+    def privateRegistryName = &quot;localhost:5000&quot;
+    def job_name_token = &quot;${JOB_NAME}&quot;.split(&apos;/&apos;)
+    def job_branch_name = &quot;${job_name_token[1]}&quot;
+            
+    node {
+        stage(&apos;Check out SCM&apos;) {
+            echo &quot;Cleaning Workspace...&quot;
+            sh &quot;rm -fr ./*&quot;
+            echo &quot;Checking out code...&quot;
+            checkout scm
+        }
+
+        stage(&apos;Unit Test&apos;) {
+            echo &quot;Running unit tests...&quot;
+            //RUN UNIT TEST
+            //sh &quot;npm install&quot;
+            //sh &quot;npm run test&quot;
+        }  
+
+        stage(&apos;Build Image&apos;) { 
+            echo &quot;Building Image&quot;
+            def buildImage = docker.build(&quot;${projectName}:${BUILD_NUMBER}&quot;)
+            echo &quot;--------------IMAGE BUILT: ${projectName}:${BUILD_NUMBER}--------------&quot;
+        }
+
+        stage(&apos;Acceptance Test&apos;) { 
+            echo &quot;Running cucumber test scripts...&quot;
+            //sh &quot;docker run --rm ${projectName}:${BUILD_NUMBER}
+            //RUN CUCUMBER TESTS
+        }
+
+        stage(&apos;Push Image to Registry&apos;) { 
+            echo &quot;BRANCH NAME IS: ${job_branch_name}&quot;
+            if(job_branch_name.equalsIgnoreCase(&quot;master&quot;)) {
+                sh &quot;docker tag ${projectName}:${BUILD_NUMBER} ${privateRegistryName}/${projectName}:${BUILD_NUMBER}&quot;
+                sh &quot;docker push ${privateRegistryName}/${projectName}:${BUILD_NUMBER}&quot;
+                echo &quot;--------------LATEST IMAGE PUSHED: ${projectName}:${BUILD_NUMBER}--------------&quot;
+            }
+        }
+
+        stage(&apos;Deploy&apos;) {
+            def deploymentOption = steps.input message: &apos;Deploy specific version of image&apos;, parameters: [
+                string(defaultValue: &quot;${BUILD_NUMBER}&quot;, name: &apos;DeployOption&apos;, description: &quot;Key in the version of image you want to deploy, default value is latest version&quot;)
+            ]
+            if (deploymentOption) {
+                sh &quot;docker stop webapp; docker rm webapp&quot;
+                sh &quot;docker run -p 8082:80 -d --name webapp localhost:5000/webapp:${deploymentOption}&quot;
+                echo &quot;--------------IMAGE DEPLOYED: ${projectName}:${deploymentOption}--------------&quot;
+            } else {
+                echo &quot;No deployment as deployment option is empty&quot;
+            }
+        }
+
+        stage(&apos;Clean up&apos;) {
+            sh &quot;docker rmi -f ${projectName}:${BUILD_NUMBER} ${privateRegistryName}/${projectName}:${BUILD_NUMBER}&quot;
+            sh &quot;rm -fr ./*&quot;
+        }
+    }
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>1116481000</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>208658700</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>4577727700</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>50974800</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>620744800</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>59</iota>
+    <head>1:59</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>ssh://git@git-server:22/git-server/repos/webapp.git</url>
+            <credentialsId>gitKey</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions/>
+      </scm>
+      <node></node>
+      <workspace>/var/jenkins_home/workspace/Devops-Project/master</workspace>
+      <changelogFile>/var/jenkins_home/jobs/Devops-Project/jobs/master/builds/31/changelog0.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

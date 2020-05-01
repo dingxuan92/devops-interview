@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  git-server:
+    container_name: git-server
+    image: jkarlos/git-server-docker
+    ports:
+      - "2222:22"
+    volumes:
+      - ./git-server/keys:/git-server/keys
+      - ./git-server/repos:/git-server/repos
+
+  webapp:
+    container_name: webapp
+    build: ./webapp
+    ports:
+      - "8082:80"
+
+  jenkins-server:
+    container_name: jenkins-server
+    build:
+      context: .
+      dockerfile: dockerfile-jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/usr/bin/docker #this might differ depends on the machine you use
+                                              #go to your terminal and type ${which docker}
+
+  docker-registry:
+    container_name: docker-registry
+    image: registry:2
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./docker_registry:/var/lib/registry

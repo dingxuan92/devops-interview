@@ -1,0 +1,11 @@
+commit 9ef5391514a99dc9c369a32379989d9aed5adec4
+tree d5b5a4160709e5f916008abd2b1d16358f26c9ff
+parent 81cee51c620511417a8ea53a65e9e15cf9f073d4
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:52:05 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:52:05 +0800
+
+    finalize ci/cd
+
+
+
+:100644 100644 d45c56158cc6faa5c482b90cd5e78ca187c3214d 8c34eaeeafc415adbd151b804b0f212aee1b9335 M	Jenkinsfile

@@ -1,0 +1,26 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2018-08-08 01:46:50.308 UTC</timestamp>
+  <original>
+    <name>Devops-Project/playground2</name>
+    <number>27</number>
+  </original>
+  <md5sum>7321d55854c280d400178187536c940f</md5sum>
+  <fileName>Docker image sha256:7321d55854c280d400178187536c940fe86581c02cc071337051b56624bf0736</fileName>
+  <usages/>
+  <facets>
+    <org.jenkinsci.plugins.docker.commons.fingerprint.DockerAncestorFingerprintFacet plugin="docker-commons@1.13">
+      <timestamp>1533692810274</timestamp>
+      <imageId>sha256:7321d55854c280d400178187536c940fe86581c02cc071337051b56624bf0736</imageId>
+      <usages>
+        <entry>
+          <string>Devops-Project/playground2</string>
+          <ranges>27</ranges>
+        </entry>
+      </usages>
+      <ancestorImageIds class="sorted-set">
+        <string>sha256:eb883be3763d1dcf83ffcfdc4d4bb242adba46cfc7ce1032caca3e1c76e3f2de</string>
+      </ancestorImageIds>
+    </org.jenkinsci.plugins.docker.commons.fingerprint.DockerAncestorFingerprintFacet>
+  </facets>
+</fingerprint>

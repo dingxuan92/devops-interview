@@ -1,0 +1,45 @@
+commit 83241e169e0ba3aac3d2f5725a5be69bfbe83fad
+tree 8c5af50cc4c81f7d66a74b180bd0aeab188ff7f4
+parent f6c2aca92a9a657434ce9682109caeddbd4b7098
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:35:16 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:35:16 +0800
+
+    test
+
+
+
+:100644 100644 bd4a7501822569f5f8ba84dc1757071deec48cc0 d45c56158cc6faa5c482b90cd5e78ca187c3214d M	Jenkinsfile
+commit f6c2aca92a9a657434ce9682109caeddbd4b7098
+tree 4e5eb498d4683e67cf521b35892b128ef4b37642
+parent 8f5b0f4957ffe03fedd80dd345a0deff1a840140
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:34:10 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:34:10 +0800
+
+    test
+
+
+
+:100644 100644 d45c56158cc6faa5c482b90cd5e78ca187c3214d bd4a7501822569f5f8ba84dc1757071deec48cc0 M	Jenkinsfile
+commit 8f5b0f4957ffe03fedd80dd345a0deff1a840140
+tree 8c5af50cc4c81f7d66a74b180bd0aeab188ff7f4
+parent 87df318d3d1db902b91e3a4f8dd9a959088dd7fd
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:25:44 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:25:44 +0800
+
+    test
+
+
+
+:100644 100644 bd4a7501822569f5f8ba84dc1757071deec48cc0 d45c56158cc6faa5c482b90cd5e78ca187c3214d M	Jenkinsfile
+commit 87df318d3d1db902b91e3a4f8dd9a959088dd7fd
+tree 4e5eb498d4683e67cf521b35892b128ef4b37642
+parent c0447e5494f4fe3aac208a283d12cf96f69b7f54
+author dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:18:46 +0800
+committer dingxuan92 <dingxuan92@gmail.com> 2018-08-08 09:18:46 +0800
+
+    test
+
+
+
+:100644 100644 9569c6d360554235b8bbad87bd7f595898fd4757 bd4a7501822569f5f8ba84dc1757071deec48cc0 M	Jenkinsfile
+:100755 100755 f72da3da4a027b3d4efb85dc99d993f6ce68e5a4 51ddf52545f9024dce624ebbe24e679a6fae88f3 M	automate_git.sh
