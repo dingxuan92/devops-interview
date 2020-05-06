@@ -1,7 +1,13 @@
 # Unnamed Company DevOps Interview Project
+<<<<<<< HEAD
 This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. I have designed and developed a simplified CI/CD for the webapp and explained my solution in the Devops_Design_Document.pdf file.
+=======
+This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. 
+>>>>>>> 4959d88750e7e87399acf7b4aad9533998eae098
 
-## Interview Project Question (DevOps)
+I have designed and developed a simplified CI/CD pipeline for a web application and explained my solution in the Devops_Design_Document.pdf file.
+
+## Original Interview Question (DevOps)
 
 The purpose of this project is to design and implement a CI/CD system for a ToDo web application. You are expected to create a short design document, and to prototype the CI/CD system in a Docker environment.
 There is no right-or-wrong answer, but you are expected to deliver a working solution. You can ask questions and seek help if there is anything that you are not familiar with. You should spend about 8-12 hours.
@@ -30,14 +36,10 @@ Deliver a ZIP (or tar.gz) file of the project directory that contains all necess
 - Document describing your implementation
 - Instructions on how to run and test the system
 
-## Extra help on the project
+## Solution
 
-To start the environment, execute:
+Please read the Design Document PDF before executing the docker-compose file.
 
-$ docker-compose up -d
-
-This starts the Git SSH Server, Webapp as well as the Jenkins server.
-The app is running at http://localhost:8082.
-
-Copy your public SSH key in the ./git-server/keys directory.
+Remember to copy your public SSH key in the ./git-server/keys directory.
 See https://github.com/jkarlosb/git-server-docker for more info on using the Git Server container.
+
