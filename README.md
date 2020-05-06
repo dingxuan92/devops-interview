@@ -1,5 +1,5 @@
 # Unnamed Company DevOps Interview Project
-This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. I have designed and developed a simplified CI/CD for the webapp and explained my answer in the Devops_Design_Document.pdf file.
+This is a DevOps project I have done while interviewing with a tech company in 2018. I cannot name the company as I signed an non-disclosure letter not to reveal the company name. I have designed and developed a simplified CI/CD for the webapp and explained my solution in the Devops_Design_Document.pdf file.
 
 ## Interview Project Question (DevOps)
 
