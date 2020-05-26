@@ -1,4 +1,4 @@
-# Unnamed Company DevOps Interview Project
+# DevOps Interview Project
 
 This is a DevOps project I have done while interviewing with a tech company in 2018.
 
