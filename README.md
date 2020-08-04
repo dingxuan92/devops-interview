@@ -1,7 +1,5 @@
 # DevOps Interview Project
 
-This is a DevOps project I have done while interviewing with a tech company in 2018.
-
 I have designed and developed a simplified CI/CD pipeline for a web application and explained my solution in the Devops_Design_Document.pdf file.
 
 ## Original Interview Question (DevOps)
